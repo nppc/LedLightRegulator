@@ -1,0 +1,618 @@
+; C:\src\Tennp\Git\LedLightRegulator\Firmware\src\Interrupts.SRC generated from: C:\src\Tennp\Git\LedLightRegulator\Firmware\src\Interrupts.c
+; COMPILER INVOKED BY:
+;        C:\SiliconLabs\SimplicityStudio\v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe C:\src\Tennp\Git\LedLightRegulator\Firmware\src\Interrupts.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\src\Tennp\Git\LedLightRegulator\Firmware\inc;C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/8051/v4.2.0//Device/EFM8BB1/inc) PRINT(.\src\Interrupts.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\Interrupts.OBJ)
+
+$NOMOD51
+
+NAME	INTERRUPTS
+
+SPI0CKR	DATA	0A2H
+P0	DATA	080H
+PSW_OV	BIT	0D0H.2
+P1	DATA	090H
+WDTCN	DATA	097H
+P2	DATA	0A0H
+ADC0CF	DATA	0BCH
+TMR2CN0_T2XCLK	BIT	0C8H.0
+SMB0CN0_MASTER	BIT	0C0H.7
+PCA0	DATA	0F9H
+EIE1	DATA	0E6H
+SMB0CN0_ACK	BIT	0C0H.1
+PSCTL	DATA	08FH
+IT01CF	DATA	0E4H
+SMB0CN0_TXMODE	BIT	0C0H.6
+DERIVID	DATA	0ADH
+P0MDOUT	DATA	0A4H
+P1MDOUT	DATA	0A5H
+ADC0CN0_ADINT	BIT	0E8H.5
+TMR2RLH	DATA	0CBH
+P2MDOUT	DATA	0A6H
+IE	DATA	0A8H
+TMR3RLH	DATA	093H
+EIP1	DATA	0F3H
+SCON0_RB8	BIT	098H.2
+TMR2RLL	DATA	0CAH
+PCA0CPH0	DATA	0FCH
+TMR3RLL	DATA	092H
+PCA0CPH1	DATA	0EAH
+SCON0_TB8	BIT	098H.3
+B_B0	BIT	0F0H.0
+DP	DATA	082H
+PCA0CPH2	DATA	0ECH
+B_B1	BIT	0F0H.1
+ADC0GT	DATA	0C3H
+B_B2	BIT	0F0H.2
+PCA0CPL0	DATA	0FBH
+B_B3	BIT	0F0H.3
+PCA0MD	DATA	0D9H
+PCA0CPM0	DATA	0DAH
+PCA0CPL1	DATA	0E9H
+B_B4	BIT	0F0H.4
+PCA0CPM1	DATA	0DBH
+PCA0CPL2	DATA	0EBH
+B_B5	BIT	0F0H.5
+PCA0CPM2	DATA	0DCH
+IP	DATA	0B8H
+ADC0TK	DATA	0B9H
+B_B6	BIT	0F0H.6
+ADC0LT	DATA	0C5H
+SCON0_MCE	BIT	098H.5
+B_B7	BIT	0F0H.7
+XBR0	DATA	0E1H
+SMB0CF	DATA	0C1H
+XBR1	DATA	0E2H
+SMB0CN0_STA	BIT	0C0H.5
+XBR2	DATA	0E3H
+ADC0MX	DATA	0BBH
+ACC_ACC0	BIT	0E0H.0
+REF0CN	DATA	0D1H
+CKCON0	DATA	08EH
+ACC_ACC1	BIT	0E0H.1
+REG0CN	DATA	0C9H
+CRC0IN	DATA	0DDH
+TMR2CN0_TR2	BIT	0C8H.2
+ACC_ACC2	BIT	0E0H.2
+ACC_ACC3	BIT	0E0H.3
+SP	DATA	081H
+CMP0MD	DATA	09DH
+ACC_ACC4	BIT	0E0H.4
+LFO0CN	DATA	0B1H
+CMP1MD	DATA	0ABH
+PCA0CN0_CCF0	BIT	0D8H.0
+ACC_ACC5	BIT	0E0H.5
+PCA0CN0_CCF1	BIT	0D8H.1
+ACC_ACC6	BIT	0E0H.6
+TMR2	DATA	0CCH
+PCA0CN0_CCF2	BIT	0D8H.2
+ACC_ACC7	BIT	0E0H.7
+TMR3	DATA	094H
+SMB0CN0_ACKRQ	BIT	0C0H.3
+VDM0CN	DATA	0FFH
+P0MDIN	DATA	0F1H
+SCON0_REN	BIT	098H.4
+SMB0TC	DATA	0ACH
+P1MDIN	DATA	0F2H
+SMB0CN0_STO	BIT	0C0H.4
+P0MASK	DATA	0FEH
+PIN_BUTPWR	BIT	080H.5
+P1MASK	DATA	0EEH
+PSW_RS0	BIT	0D0H.3
+PCA0CN0_CF	BIT	0D8H.7
+PCA0CENT	DATA	09EH
+SPI0CN0_RXOVRN	BIT	0F8H.4
+PSW_RS1	BIT	0D0H.4
+PIN_BUT1DEC	BIT	090H.4
+ADC0CN0_ADEN	BIT	0E8H.7
+TMOD	DATA	089H
+TCON	DATA	088H
+CRC0FLIP	DATA	0CFH
+PSW_PARITY	BIT	0D0H.0
+IE_ES0	BIT	0A8H.4
+CMP0MX	DATA	09FH
+IE_ET0	BIT	0A8H.1
+CMP1MX	DATA	0AAH
+IE_ET1	BIT	0A8H.3
+P0SKIP	DATA	0D4H
+IE_ET2	BIT	0A8H.5
+P1SKIP	DATA	0D5H
+ADC0CN0	DATA	0E8H
+IE_EX0	BIT	0A8H.0
+ADC0CN1	DATA	0B2H
+PCA0CN0_CR	BIT	0D8H.6
+IE_EX1	BIT	0A8H.2
+SCON0_SMODE	BIT	098H.7
+DEVICEID	DATA	0B5H
+CLKSEL	DATA	0A9H
+PIN_BUT1INC	BIT	090H.5
+SPI0CN0_SPIEN	BIT	0F8H.0
+B	DATA	0F0H
+ADC0H	DATA	0BEH
+CRC0AUTO	DATA	0D2H
+ADC0CN0_ADBMEN	BIT	0E8H.6
+TMR2RL	DATA	0CAH
+ADC0L	DATA	0BDH
+TMR3RL	DATA	092H
+PCA0CN0	DATA	0D8H
+ACC	DATA	0E0H
+PCA0CP0	DATA	0FBH
+PCA0CP1	DATA	0E9H
+PCA0CP2	DATA	0EBH
+CRC0CN0	DATA	0CEH
+TH0	DATA	08CH
+IP_PS0	BIT	0B8H.4
+TH1	DATA	08DH
+PCA0H	DATA	0FAH
+IP_PT0	BIT	0B8H.1
+IP_PT1	BIT	0B8H.3
+SMB0CN0_ARBLOST	BIT	0C0H.2
+IP_PT2	BIT	0B8H.5
+TL0	DATA	08AH
+SPI0CN0_TXBMT	BIT	0F8H.1
+PSW_F0	BIT	0D0H.5
+IE_ESPI0	BIT	0A8H.6
+TL1	DATA	08BH
+PCA0L	DATA	0F9H
+SMB0CN0_SI	BIT	0C0H.0
+PSW_F1	BIT	0D0H.1
+P0_B0	BIT	080H.0
+IP_PX0	BIT	0B8H.0
+P1_B0	BIT	090H.0
+P0_B1	BIT	080H.1
+IP_PX1	BIT	0B8H.2
+CMP0CN0	DATA	09BH
+TCON_IE0	BIT	088H.1
+P2_B0	BIT	0A0H.0
+P1_B1	BIT	090H.1
+P0_B2	BIT	080H.2
+CMP1CN0	DATA	0BFH
+TCON_IE1	BIT	088H.3
+P2_B1	BIT	0A0H.1
+P1_B2	BIT	090H.2
+P0_B3	BIT	080H.3
+SMB0CN0	DATA	0C0H
+P1_B3	BIT	090H.3
+P0_B4	BIT	080H.4
+P1_B4	BIT	090H.4
+P0_B5	BIT	080H.5
+P1_B5	BIT	090H.5
+P0_B6	BIT	080H.6
+P1_B6	BIT	090H.6
+P0_B7	BIT	080H.7
+P1_B7	BIT	090H.7
+DPH	DATA	083H
+ADC0GTH	DATA	0C4H
+TMR2CN0_TF2H	BIT	0C8H.7
+TMR2CN0_T2SPLIT	BIT	0C8H.3
+PSW_AC	BIT	0D0H.6
+SPI0CN0	DATA	0F8H
+HFO0CAL	DATA	0C7H
+TCON_TF0	BIT	088H.5
+SCON0_RI	BIT	098H.0
+DPL	DATA	082H
+TCON_TF1	BIT	088H.7
+SBUF0	DATA	099H
+PCON0	DATA	087H
+ADC0GTL	DATA	0C3H
+TMR2CN0_TF2L	BIT	0C8H.6
+SCON0_TI	BIT	098H.1
+ADC0CN0_ADCM0	BIT	0E8H.0
+ADC0LTH	DATA	0C6H
+TCON_IT0	BIT	088H.0
+ADC0CN0_ADCM1	BIT	0E8H.1
+RSTSRC	DATA	0EFH
+P0MAT	DATA	0FDH
+CRC0DAT	DATA	0DEH
+TCON_IT1	BIT	088H.2
+ADC0CN0_ADCM2	BIT	0E8H.2
+SCON0	DATA	098H
+PRTDRV	DATA	0F6H
+P1MAT	DATA	0EDH
+ADC0CN0_ADWINT	BIT	0E8H.3
+ADC0CN0_ADBUSY	BIT	0E8H.4
+SMB0ADM	DATA	0D6H
+ADC0LTL	DATA	0C5H
+SPI0CN0_MODF	BIT	0F8H.5
+IP_PSPI0	BIT	0B8H.6
+PCA0CLR	DATA	09CH
+TMR2CN0	DATA	0C8H
+TMR3CN0	DATA	091H
+SMB0ADR	DATA	0D7H
+TCON_TR0	BIT	088H.4
+PIN_PWM0	BIT	080H.7
+TMR2CN0_TF2CEN	BIT	0C8H.4
+TCON_TR1	BIT	088H.6
+SMB0DAT	DATA	0C2H
+TMR2H	DATA	0CDH
+SPI0CFG	DATA	0A1H
+TMR3H	DATA	095H
+CRC0CNT	DATA	0D3H
+PCA0POL	DATA	096H
+TMR2L	DATA	0CCH
+SPI0CN0_SPIF	BIT	0F8H.7
+TMR3L	DATA	094H
+ADC0PWR	DATA	0DFH
+IE_EA	BIT	0A8H.7
+TMR2CN0_TF2LEN	BIT	0C8H.5
+SPI0CN0_WCOL	BIT	0F8H.6
+SPI0CN0_NSSMD0	BIT	0F8H.2
+PSW_CY	BIT	0D0H.7
+SPI0DAT	DATA	0A3H
+SPI0CN0_NSSMD1	BIT	0F8H.3
+ADC0	DATA	0BDH
+PSW	DATA	0D0H
+PCA0PWM	DATA	0F7H
+REVID	DATA	0B6H
+FLKEY	DATA	0B7H
+ADC0AC	DATA	0B3H
+?PR?TIMER2_ISR?INTERRUPTS                SEGMENT CODE 
+?DT?TIMER2_ISR?INTERRUPTS                SEGMENT DATA OVERLAYABLE
+?PR?ADC0EOC_ISR?INTERRUPTS               SEGMENT CODE 
+?PR?TIMER3_ISR?INTERRUPTS                SEGMENT CODE 
+	EXTRN	XDATA (Adc_data)
+	EXTRN	BIT (ADC_buffer_ready)
+	EXTRN	DATA (glob)
+	EXTRN	BIT (pwmOut0_update)
+	EXTRN	BIT (buttonLastState)
+	EXTRN	DATA (tmp_millis)
+	EXTRN	BIT (delay_on)
+	EXTRN	DATA (buttonTmr)
+	EXTRN	DATA (pwmglob)
+	PUBLIC	TIMER3_ISR
+	PUBLIC	ADC0EOC_ISR
+	PUBLIC	TIMER2_ISR
+
+	RSEG  ?DT?TIMER2_ISR?INTERRUPTS
+?TIMER2_ISR?BYTE:
+        tmp?040:   DS   2
+; #pragma src
+; //=========================================================
+; // src/Interrupts.c: generated by Hardware Configurator
+; //
+; // This file will be regenerated when saving a document.
+; // leave the sections inside the "$[...]" comment tags alone
+; // or they will be overwritten!!
+; //=========================================================
+; 
+; // USER INCLUDES
+; #include "main.h"
+; #include "gen.h"
+; #include "button.h"
+; #include "temperature.h"
+; 
+; //-----------------------------------------------------------------------------
+; // TIMER2_ISR
+; //-----------------------------------------------------------------------------
+; // enters interrupt every 1ms
+; //-----------------------------------------------------------------------------
+CSEG	AT	0002BH
+	LJMP	TIMER2_ISR
+
+; SI_INTERRUPT (TIMER2_ISR, TIMER2_IRQn)
+
+	RSEG  ?PR?TIMER2_ISR?INTERRUPTS
+	USING	0
+TIMER2_ISR:
+	PUSH 	ACC
+	PUSH 	PSW
+	MOV  	PSW,#00H
+	PUSH 	AR0
+	USING	0
+			; SOURCE LINE # 21
+;   {
+;     U16_U8 tmp;
+;     if(buttonLastState)
+			; SOURCE LINE # 24
+	JNB  	buttonLastState,?C0001
+;       { buttonTmr++;}
+			; SOURCE LINE # 25
+	INC  	buttonTmr+01H
+	MOV  	A,buttonTmr+01H
+	JNZ  	?C0019
+	INC  	buttonTmr
+?C0019:
+?C0001:
+; 
+;     // advance delay timer
+;     if(delay_on)
+			; SOURCE LINE # 28
+	JNB  	delay_on,?C0002
+;       {
+			; SOURCE LINE # 29
+;         if(tmp_millis!=0)
+			; SOURCE LINE # 30
+	MOV  	A,tmp_millis+01H
+	ORL  	A,tmp_millis
+	JZ   	?C0003
+;           { tmp_millis--;}
+			; SOURCE LINE # 31
+	MOV  	A,tmp_millis+01H
+	DEC  	tmp_millis+01H
+	JNZ  	?C0002
+	DEC  	tmp_millis
+?C0020:
+	SJMP 	?C0002
+?C0003:
+;         else
+;           { delay_on=0;}
+			; SOURCE LINE # 33
+	CLR  	delay_on
+;       }
+			; SOURCE LINE # 34
+?C0002:
+; 
+;     if(pwmglob.pwmchangecntr==0)
+			; SOURCE LINE # 36
+	MOV  	A,pwmglob+04H
+	JNZ  	?C0005
+;       {
+			; SOURCE LINE # 37
+;         pwmglob.pwmchangecntr = LIGHTPANELSPEED;
+			; SOURCE LINE # 38
+	MOV  	pwmglob+04H,#02H
+;         if(pwmglob.cur_out<pwmglob.set_out)
+			; SOURCE LINE # 39
+	CLR  	C
+	MOV  	A,pwmglob+03H
+	SUBB 	A,pwmglob+01H
+	MOV  	A,pwmglob
+	XRL  	A,#080H
+	MOV  	R0,A
+	MOV  	A,pwmglob+02H
+	XRL  	A,#080H
+	SUBB 	A,R0
+	JNC  	?C0006
+;           { pwmglob.cur_out++;pwmOut0_update = 1;} // adjust
+			; SOURCE LINE # 40
+	INC  	pwmglob+03H
+	MOV  	A,pwmglob+03H
+	JNZ  	?C0021
+	INC  	pwmglob+02H
+?C0021:
+	SETB 	pwmOut0_update
+	SJMP 	?C0007
+?C0006:
+;         else if(pwmglob.cur_out>pwmglob.set_out)
+			; SOURCE LINE # 41
+	SETB 	C
+	MOV  	A,pwmglob+03H
+	SUBB 	A,pwmglob+01H
+	MOV  	A,pwmglob
+	XRL  	A,#080H
+	MOV  	R0,A
+	MOV  	A,pwmglob+02H
+	XRL  	A,#080H
+	SUBB 	A,R0
+	JC   	?C0007
+;           { pwmglob.cur_out--;pwmOut0_update = 1;} // adjust
+			; SOURCE LINE # 42
+	MOV  	A,pwmglob+03H
+	DEC  	pwmglob+03H
+	JNZ  	?C0022
+	DEC  	pwmglob+02H
+?C0022:
+	SETB 	pwmOut0_update
+?C0007:
+; 
+;         if(pwmOut0_update)
+			; SOURCE LINE # 44
+	JNB  	pwmOut0_update,?C0012
+;           {
+			; SOURCE LINE # 45
+;             // disable output if needed
+;             if(pwmglob.cur_out==0)
+			; SOURCE LINE # 47
+	MOV  	A,pwmglob+03H
+	ORL  	A,pwmglob+02H
+	JNZ  	?C0010
+;               {
+			; SOURCE LINE # 48
+;                 P0MDOUT &= ~P0MDOUT_B7__BMASK;  // Set opendrain
+			; SOURCE LINE # 49
+	ANL  	P0MDOUT,#07FH
+;                 PCA0CPM0 &= ~PCA0CPM0_ECOM__BMASK;// disable led PWM
+			; SOURCE LINE # 50
+	ANL  	PCA0CPM0,#0BFH
+;                 PIN_PWM0 = 0;
+			; SOURCE LINE # 51
+	CLR  	PIN_PWM0
+;               }
+			; SOURCE LINE # 52
+?C0010:
+;             PCA0PWM |= PCA0PWM_ARSEL__AUTORELOAD;
+			; SOURCE LINE # 53
+	ORL  	PCA0PWM,#080H
+;             tmp.u16 = pwmglob.cur_out;
+			; SOURCE LINE # 54
+	MOV  	tmp?040,pwmglob+02H
+	MOV  	tmp?040+01H,pwmglob+03H
+;             // convert 16bit to 2x8bit
+;             PCA0CPL0 = tmp.u8[1];
+			; SOURCE LINE # 56
+	MOV  	PCA0CPL0,tmp?040+01H
+;             PCA0CPH0 = tmp.u8[0];
+			; SOURCE LINE # 57
+	MOV  	PCA0CPH0,tmp?040
+;             pwmOut0_update = 0;
+			; SOURCE LINE # 58
+	CLR  	pwmOut0_update
+;             // enable output if needed
+;             if(pwmglob.cur_out==1 && pwmglob.set_out>0)
+			; SOURCE LINE # 60
+	MOV  	A,pwmglob+03H
+	XRL  	A,#01H
+	ORL  	A,pwmglob+02H
+	JNZ  	?C0012
+	SETB 	C
+	MOV  	A,pwmglob+01H
+	SUBB 	A,#00H
+	MOV  	A,pwmglob
+	XRL  	A,#080H
+	SUBB 	A,#080H
+	JC   	?C0012
+;               {
+			; SOURCE LINE # 61
+;                 PCA0CPM0 |= PCA0CPM0_ECOM__ENABLED; // enable led PWM
+			; SOURCE LINE # 62
+	ORL  	PCA0CPM0,#040H
+;                 P0MDOUT |= P0MDOUT_B7__PUSH_PULL;// Set pushpull
+			; SOURCE LINE # 63
+	ORL  	P0MDOUT,#080H
+;               }
+			; SOURCE LINE # 64
+;           }
+			; SOURCE LINE # 65
+;       }
+			; SOURCE LINE # 66
+	SJMP 	?C0012
+?C0005:
+;     else
+;       {
+			; SOURCE LINE # 68
+;         pwmglob.pwmchangecntr--;
+			; SOURCE LINE # 69
+	DEC  	pwmglob+04H
+;       }
+			; SOURCE LINE # 70
+?C0012:
+; 
+;     TMR2CN0_TF2H = 0;
+			; SOURCE LINE # 72
+	CLR  	TMR2CN0_TF2H
+;   }
+			; SOURCE LINE # 73
+	POP  	AR0
+	POP  	PSW
+	POP  	ACC
+	RETI 	
+; END OF TIMER2_ISR
+
+CSEG	AT	00053H
+	LJMP	ADC0EOC_ISR
+
+; 
+; //-----------------------------------------------------------------------------
+; // ADC0EOC_ISR
+; //-----------------------------------------------------------------------------
+; //
+; // ADC0EOC ISR Content goes here. Remember to clear flag bits:
+; // ADC0CN0::ADINT (Conversion Complete Interrupt Flag)
+; //
+; //-----------------------------------------------------------------------------
+; SI_INTERRUPT (ADC0EOC_ISR, ADC0EOC_IRQn)
+
+	RSEG  ?PR?ADC0EOC_ISR?INTERRUPTS
+	USING	0
+ADC0EOC_ISR:
+	PUSH 	ACC
+	PUSH 	DPH
+	PUSH 	DPL
+	PUSH 	PSW
+	USING	0
+			; SOURCE LINE # 83
+;   {
+;   ADC0CN0_ADINT = 0; // reset interrupt flag
+			; SOURCE LINE # 85
+	CLR  	ADC0CN0_ADINT
+;   Adc_data[glob.samples_count]=ADC0;
+			; SOURCE LINE # 86
+	MOV  	A,glob
+	ADD  	A,ACC
+	ADD  	A,#LOW (Adc_data)
+	MOV  	DPL,A
+	CLR  	A
+	ADDC 	A,#HIGH (Adc_data)
+	MOV  	DPH,A
+	MOV  	A,ADC0+01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,ADC0
+	MOVX 	@DPTR,A
+;   ADC_buffer_ready = 1; // assume buffer is filled
+			; SOURCE LINE # 87
+	SETB 	ADC_buffer_ready
+;   if(glob.samples_count>0){
+			; SOURCE LINE # 88
+	SETB 	C
+	MOV  	A,glob
+	SUBB 	A,#00H
+	MOV  	A,#080H
+	SUBB 	A,#080H
+	JC   	?C0015
+;     glob.samples_count--;
+			; SOURCE LINE # 89
+	DEC  	glob
+;     ADC0CN0_ADBUSY = 1; // start NEXT ADC reading
+			; SOURCE LINE # 90
+	SETB 	ADC0CN0_ADBUSY
+;     ADC_buffer_ready = 0; // buffer is not filled yet
+			; SOURCE LINE # 91
+	CLR  	ADC_buffer_ready
+;   }
+			; SOURCE LINE # 92
+; 
+;   }
+			; SOURCE LINE # 94
+?C0015:
+	POP  	PSW
+	POP  	DPL
+	POP  	DPH
+	POP  	ACC
+	RETI 	
+; END OF ADC0EOC_ISR
+
+CSEG	AT	00073H
+	LJMP	TIMER3_ISR
+
+; 
+; //-----------------------------------------------------------------------------
+; // TIMER3_ISR
+; //-----------------------------------------------------------------------------
+; //
+; // TIMER3 ISR Content goes here. Remember to clear flag bits:
+; // TMR3CN0::TF3H (Timer # High Byte Overflow Flag)
+; // TMR3CN0::TF3L (Timer # Low Byte Overflow Flag)
+; //
+; //-----------------------------------------------------------------------------
+; 
+; // 30Hz
+; SI_INTERRUPT (TIMER3_ISR, TIMER3_IRQn)
+
+	RSEG  ?PR?TIMER3_ISR?INTERRUPTS
+	USING	0
+TIMER3_ISR:
+	PUSH 	ACC
+	PUSH 	PSW
+	USING	0
+			; SOURCE LINE # 107
+;   {
+;   TMR3CN0 &=~TMR3CN0_TF3H__BMASK; // clear interrupt
+			; SOURCE LINE # 109
+	ANL  	TMR3CN0,#07FH
+;   if(glob.temp_cntr > 0){glob.temp_cntr--;}else{ADC0CN0_ADBUSY = 1;glob.samples_count = TMPR_SAMPLES;glob.temp_cntr = 30;} // every second
+			; SOURCE LINE # 110
+	SETB 	C
+	MOV  	A,glob+02H
+	SUBB 	A,#00H
+	MOV  	A,glob+01H
+	SUBB 	A,#00H
+	JC   	?C0016
+	MOV  	A,glob+02H
+	DEC  	glob+02H
+	JNZ  	?C0018
+	DEC  	glob+01H
+?C0023:
+	SJMP 	?C0018
+?C0016:
+	SETB 	ADC0CN0_ADBUSY
+	MOV  	glob,#08H
+	MOV  	glob+01H,#00H
+	MOV  	glob+02H,#01EH
+;   }
+			; SOURCE LINE # 111
+?C0018:
+	POP  	PSW
+	POP  	ACC
+	RETI 	
+; END OF TIMER3_ISR
+
+	END
