@@ -61,11 +61,11 @@ int main(void) {
 
 	while(1){
 	    processButtons(); // PWR/INC/DEC buttons
-	    if(ADC_buffer_ready){
+	    if(ADC_buffer_ready && glob.LIGHT_on==1){ // only check temperature if power is on
 	        int16_t tmpr = ConvertADC2temp();
 	        ADC_buffer_ready = 0;
 	        if(tmpr>TEMPERATUREMAX){
-	            if(glob.LED_step>0){glob.LED_step--;}{glob.LIGHT_on=0;setval_PWMout(0);}
+	            if(glob.LED_step>0){glob.LED_step--;}else{glob.LIGHT_on=0;setval_PWMout(0);}
 	            allowStoreEEPROM = 0;
 	            glob.temp_cntr = 50*15; // delay for 15 seconds
 	        }
