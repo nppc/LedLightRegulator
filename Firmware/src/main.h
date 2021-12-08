@@ -19,11 +19,11 @@ SI_SBIT(PIN_PWM0, SFR_P0, 7);
 #define LEDSTEPS 3
 //#define LIGHTPANELPWM_MAX 1000 // 10 bit PWM value
 //#define LIGHTPANELPWM_MIN 140 // 10 bit PWM value
-#define LIGHTPANELPWM_MAX 510 // 9 bit PWM value
-#define LIGHTPANELPWM_MIN (LIGHTPANELPWM_MAX/10) // 9 bit PWM value
+#define LIGHTPANELPWM_MAX 511 // 9 bit PWM value
+#define LIGHTPANELPWM_MIN 90 // 9 bit PWM value
 #define LIGHTPANELSPEED 2 // Adjust Light Panel PWM every N ms.
 
-#define TEMPERATUREMAX 50 // if higher - reduce light to previous step
+#define TEMPERATUREMAX 45 // if higher - reduce light to previous step
 
 
 // Structure for accessing 16bit number by 2 8 bit (back and forth)

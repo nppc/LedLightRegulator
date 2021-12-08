@@ -48,7 +48,7 @@ int16_t ConvertADC2temp(void){
   // return only positive temp
   if(adcval>tVoffset){
 	  int16_t tmp = (uint32_t)(adcval-tVoffset) * 256 / tSlope;
-	  tmp = tmp + 0; // adjust temperature according to calibration. While in calibration do not adjust temperature
+	  tmp = tmp + 14; // adjust temperature according to calibration. While in calibration do not adjust temperature
     return tmp;
   }else{
     return 0;
